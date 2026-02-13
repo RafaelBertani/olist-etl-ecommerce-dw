@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>project</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="New Connection" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/P4_olist" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="db#1post" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="58255f08-3868-4740-bf28-bbfab0c6dcb3" dbcs-ref="DS2" name="New Connection" physicalName="New Connection" >
+   <catalog id="CAT1" populated="false" UUID="fcc68c50-7070-4980-bd87-d1163653229f" name="ECMDW" nativeTerm="database" physicalName="ECMDW" >
+   </catalog>
+   <catalog id="CAT2" populated="true" UUID="403fecfb-4857-47ec-a4af-ab3092d1bdec" name="P4_olist" nativeTerm="database" physicalName="P4_olist" >
+    <schema id="SCH3" populated="false" UUID="9f312a80-553f-481c-a421-0f9614654ac9" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH4" populated="false" UUID="1ec37406-b384-48a2-97b9-9574d4b0c0e6" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH5" populated="true" UUID="e3cd06c9-22e6-4d0c-ab71-ebf715054515" name="public" nativeTerm="schema" physicalName="public" >
+     <table id="TAB6" populated="true" UUID="28fadfd3-870d-461c-9009-f14e4819f329" name="customers" objectType="TABLE" physicalName="customers" >
+      <remarks></remarks>
+      <folder id="FOLTAB61" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL7" populated="true" UUID="1781adff-d6c0-474b-b73f-e1b871b195fc" autoIncrement="false" defaultValue="" name="customer_id" nullable="0" physicalName="customer_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL8" populated="true" UUID="476db3a1-ad43-42cc-aed9-628f3286415e" autoIncrement="false" defaultValue="" name="customer_unique_id" nullable="1" physicalName="customer_unique_id" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL9" populated="true" UUID="b8045fb6-ee49-403f-b71f-90bf620a83ee" autoIncrement="false" defaultValue="" name="customer_zip_code_prefix" nullable="1" physicalName="customer_zip_code_prefix" precision="10" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL10" populated="true" UUID="16330c61-3058-4516-81da-ee6fd20af92a" autoIncrement="false" defaultValue="" name="customer_city" nullable="1" physicalName="customer_city" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL11" populated="true" UUID="2eb905c1-92e5-4760-87c6-05cf6ed05cdb" autoIncrement="false" defaultValue="" name="customer_state" nullable="1" physicalName="customer_state" precision="2" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB63" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB64" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX12" populated="true" UUID="d303e51e-ebab-4107-85c0-bea2ad457b21" clustered="false" name="customers_pkey" physicalName="customers_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC13" populated="true" UUID="1dda7c75-3492-4564-8e7a-4dff0f37ddc0" ascendingOrDescending="UNSPECIFIED" column-ref="COL7" name="customer_id" physicalName="customer_id" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB14" populated="true" UUID="f2c9fa90-b88c-44a2-8fa4-6d2cee90a846" name="geolocation" objectType="TABLE" physicalName="geolocation" >
+      <remarks></remarks>
+      <folder id="FOLTAB141" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL15" populated="true" UUID="37be71ad-0686-49a9-9aa1-574786ecd1b3" autoIncrement="false" defaultValue="" name="geolocation_zip_code_prefix" nullable="1" physicalName="geolocation_zip_code_prefix" precision="10" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL16" populated="true" UUID="b6d6076a-3254-436c-9a1a-625b86d38d9f" autoIncrement="false" defaultValue="" name="geolocation_lat" nullable="1" physicalName="geolocation_lat" precision="17" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       <column id="COL17" populated="true" UUID="4c9fa168-3944-4d5e-887c-63adeee8b7c9" autoIncrement="false" defaultValue="" name="geolocation_lng" nullable="1" physicalName="geolocation_lng" precision="17" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       <column id="COL18" populated="true" UUID="017dceac-c677-4ab6-ac69-3c4969d6ef74" autoIncrement="false" defaultValue="" name="geolocation_city" nullable="1" physicalName="geolocation_city" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL19" populated="true" UUID="b39c39a5-80e4-43c4-bd08-2a996ee8b071" autoIncrement="false" defaultValue="" name="geolocation_state" nullable="1" physicalName="geolocation_state" precision="2" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB143" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB142" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB144" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX20" populated="true" UUID="e5f4629b-2e6b-49df-b1a2-8e219fbc8622" clustered="false" name="geolocation_pk" physicalName="geolocation_pk" primaryKeyIndex="true" unique="false" >
+       </index>
+      </folder>
+     </table>
+     <table id="TAB21" populated="true" UUID="ed6c091d-4b1b-49b6-be38-93d2f9b0b59b" name="order_items" objectType="TABLE" physicalName="order_items" >
+      <remarks></remarks>
+      <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL22" populated="true" UUID="b7da90e0-338b-478f-a0ed-973e2bc4f7f3" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL23" populated="true" UUID="5111affb-c4ff-4cea-8859-ee7551eadf2a" autoIncrement="false" defaultValue="" name="order_item_id" nullable="0" physicalName="order_item_id" precision="10" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL24" populated="true" UUID="a16645af-e59f-410a-8a4c-e366998630c9" autoIncrement="false" defaultValue="" name="product_id" nullable="1" physicalName="product_id" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL25" populated="true" UUID="a79812a5-a085-443d-a6fe-3b9f21c442ab" autoIncrement="false" defaultValue="" name="seller_id" nullable="1" physicalName="seller_id" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL26" populated="true" UUID="4bb33c82-05e1-4843-adf4-66ffac1e856b" autoIncrement="false" defaultValue="" name="shipping_limit_date" nullable="1" physicalName="shipping_limit_date" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL27" populated="true" UUID="d9074900-a1fa-4db2-8428-7f6c4d6178ab" autoIncrement="false" defaultValue="" name="price" nullable="1" physicalName="price" precision="10" referenceCount="1" scale="2" sourceDataTypeName="numeric" type="2" >
+        <remarks></remarks>
+       </column>
+       <column id="COL28" populated="true" UUID="79f1e1b2-0c70-4fed-a632-1e53a5f28708" autoIncrement="false" defaultValue="" name="freight_value" nullable="1" physicalName="freight_value" precision="10" referenceCount="1" scale="2" sourceDataTypeName="numeric" type="2" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX29" populated="true" UUID="ec3f30db-ec9a-41c3-8879-215ded5ae227" clustered="false" name="order_items_pkey" physicalName="order_items_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC30" populated="true" UUID="9b65d597-1cd7-4b5a-8d30-f8bd0e8efd8a" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="order_id" physicalName="order_id" />
+        <index-column id="IDC31" populated="true" UUID="827f3d0e-27f1-4af2-8155-ba2169c29339" ascendingOrDescending="UNSPECIFIED" column-ref="COL23" name="order_item_id" physicalName="order_item_id" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB32" populated="true" UUID="b715a8c5-eb3e-44b1-ae29-25c8a8cf7f14" name="order_payments" objectType="TABLE" physicalName="order_payments" >
+      <remarks></remarks>
+      <folder id="FOLTAB321" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL33" populated="true" UUID="24fe3425-2526-4e6f-a1f8-17dc86f2271c" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL34" populated="true" UUID="33abb1d3-d5a0-4fab-b689-d6c2a6e247c8" autoIncrement="false" defaultValue="" name="payment_sequential" nullable="0" physicalName="payment_sequential" precision="10" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL35" populated="true" UUID="c90b5304-876e-4f12-b82b-0e9208d3a92d" autoIncrement="false" defaultValue="" name="payment_type" nullable="1" physicalName="payment_type" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL36" populated="true" UUID="8c7e01fb-bc66-44ef-8f38-4025a8af36dc" autoIncrement="false" defaultValue="" name="payment_installments" nullable="1" physicalName="payment_installments" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL37" populated="true" UUID="bd6207b8-2fd4-474a-ae66-2ac2ae7b107d" autoIncrement="false" defaultValue="" name="payment_value" nullable="1" physicalName="payment_value" precision="10" referenceCount="1" scale="2" sourceDataTypeName="numeric" type="2" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB323" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB322" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB324" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX38" populated="true" UUID="20eafe28-2b2a-4f2c-99f5-7a62cd08bf65" clustered="false" name="order_payments_pkey" physicalName="order_payments_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC39" populated="true" UUID="5a168539-3b1b-48d9-a0e3-ad65ade49014" ascendingOrDescending="UNSPECIFIED" column-ref="COL33" name="order_id" physicalName="order_id" />
+        <index-column id="IDC40" populated="true" UUID="830b11f0-0fd7-4813-abff-90c62a3ddba8" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="payment_sequential" physicalName="payment_sequential" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB41" populated="true" UUID="b65064e8-99c7-4c77-985a-dbbd86343457" name="order_reviews" objectType="TABLE" physicalName="order_reviews" >
+      <remarks></remarks>
+      <folder id="FOLTAB411" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL42" populated="true" UUID="092e095c-a2ac-4e86-9866-696aad85ecc6" autoIncrement="false" defaultValue="" name="review_id" nullable="0" physicalName="review_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL43" populated="true" UUID="1d66b5b1-1208-40ca-a801-b69440a5077a" autoIncrement="false" defaultValue="" name="order_id" nullable="1" physicalName="order_id" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL44" populated="true" UUID="f5e1e476-d75b-41ee-b285-8fa7ec72480a" autoIncrement="false" defaultValue="" name="review_score" nullable="1" physicalName="review_score" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL45" populated="true" UUID="c859f6aa-cba4-4626-82e4-e22650d9a955" autoIncrement="false" defaultValue="" name="review_comment_title" nullable="1" physicalName="review_comment_title" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL46" populated="true" UUID="128cda9e-686c-4556-924e-fe0d8982214f" autoIncrement="false" defaultValue="" name="review_comment_message" nullable="1" physicalName="review_comment_message" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL47" populated="true" UUID="a87ebb2a-42a2-429a-8f89-248bfc505fad" autoIncrement="false" defaultValue="" name="review_creation_date" nullable="1" physicalName="review_creation_date" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL48" populated="true" UUID="3d924690-ef5c-460d-b335-1baf30d594a9" autoIncrement="false" defaultValue="" name="review_answer_timestamp" nullable="1" physicalName="review_answer_timestamp" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB413" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB412" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB414" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX49" populated="true" UUID="4f74445c-c2c4-4184-a723-1573d2b526fc" clustered="false" name="order_reviews_pkey" physicalName="order_reviews_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC50" populated="true" UUID="6554b923-a14b-48b4-944f-80611ce5c102" ascendingOrDescending="UNSPECIFIED" column-ref="COL42" name="review_id" physicalName="review_id" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB51" populated="true" UUID="9b071fce-7bfa-44cb-b7cc-9bb5ae804c7a" name="orders" objectType="TABLE" physicalName="orders" >
+      <remarks></remarks>
+      <folder id="FOLTAB511" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL52" populated="true" UUID="e775fa02-051b-4bc7-a485-c3f1fdc2c299" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL53" populated="true" UUID="0c31138e-fcda-42fb-a9b7-86a2fb8fb0a0" autoIncrement="false" defaultValue="" name="customer_id" nullable="1" physicalName="customer_id" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL54" populated="true" UUID="3f9eb86b-6635-40e9-b49c-d52408120b88" autoIncrement="false" defaultValue="" name="order_status" nullable="1" physicalName="order_status" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL55" populated="true" UUID="2e77a498-3e1a-4501-8fca-b1507ec32dcb" autoIncrement="false" defaultValue="" name="order_purchase_timestamp" nullable="1" physicalName="order_purchase_timestamp" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL56" populated="true" UUID="aad984b5-dc98-41d1-8498-414f91ccc934" autoIncrement="false" defaultValue="" name="order_approved_at" nullable="1" physicalName="order_approved_at" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL57" populated="true" UUID="d799ae90-70cd-4f1f-8c1b-8fc2dc6c20cd" autoIncrement="false" defaultValue="" name="order_delivered_carrier_date" nullable="1" physicalName="order_delivered_carrier_date" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL58" populated="true" UUID="0dcf920a-6088-4190-a4b2-0cb0ef95617e" autoIncrement="false" defaultValue="" name="order_delivered_customer_date" nullable="1" physicalName="order_delivered_customer_date" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       <column id="COL59" populated="true" UUID="478cfbd4-d74e-4b6b-8a62-15510f5643b3" autoIncrement="false" defaultValue="" name="order_estimated_delivery_date" nullable="1" physicalName="order_estimated_delivery_date" precision="29" referenceCount="1" scale="6" sourceDataTypeName="timestamp" type="93" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB513" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB512" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB514" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX60" populated="true" UUID="e4bf4b3a-a05c-48ee-a293-5c02f6989403" clustered="false" name="orders_pkey" physicalName="orders_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC61" populated="true" UUID="f5004384-40b5-47f2-98d0-f33be0572372" ascendingOrDescending="UNSPECIFIED" column-ref="COL52" name="order_id" physicalName="order_id" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB62" populated="true" UUID="2f378c2d-bddd-4a24-8689-2a182ebe3575" name="products" objectType="TABLE" physicalName="products" >
+      <remarks></remarks>
+      <folder id="FOLTAB621" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL63" populated="true" UUID="ae6d551f-4c1a-413a-bdd0-4ef0c05af7f5" autoIncrement="false" defaultValue="" name="product_id" nullable="0" physicalName="product_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL64" populated="true" UUID="2b07da55-7d03-48ad-8466-7728964990ef" autoIncrement="false" defaultValue="" name="product_category_name" nullable="1" physicalName="product_category_name" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL65" populated="true" UUID="e7cfe106-8992-4deb-a545-cfb81eb1a72e" autoIncrement="false" defaultValue="" name="product_name_length" nullable="1" physicalName="product_name_length" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL66" populated="true" UUID="7309b00f-b30a-49b2-bd6b-4c9eccfb62ad" autoIncrement="false" defaultValue="" name="product_description_length" nullable="1" physicalName="product_description_length" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL67" populated="true" UUID="c65cfa02-9cc7-4da9-96cb-3b706385608c" autoIncrement="false" defaultValue="" name="product_photos_qty" nullable="1" physicalName="product_photos_qty" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL68" populated="true" UUID="b07a8346-9167-4158-ae00-23ee3496a47c" autoIncrement="false" defaultValue="" name="product_weight_g" nullable="1" physicalName="product_weight_g" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL69" populated="true" UUID="b3e87559-a3c2-4cee-a714-7ff69637ac32" autoIncrement="false" defaultValue="" name="product_length_cm" nullable="1" physicalName="product_length_cm" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL70" populated="true" UUID="41a13845-7b63-48f6-a38a-3caf8c10f8d4" autoIncrement="false" defaultValue="" name="product_height_cm" nullable="1" physicalName="product_height_cm" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL71" populated="true" UUID="b4e6662a-a843-4589-ace7-00d3e895b364" autoIncrement="false" defaultValue="" name="product_width_cm" nullable="1" physicalName="product_width_cm" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB623" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB622" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB624" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX72" populated="true" UUID="1e88c1e2-12a1-4f24-b8dd-1c541a301055" clustered="false" name="products_pkey" physicalName="products_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC73" populated="true" UUID="fc7d80dd-6af3-4169-a6a9-fd2548f88323" ascendingOrDescending="UNSPECIFIED" column-ref="COL63" name="product_id" physicalName="product_id" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB74" populated="true" UUID="e5f1ebe7-f0d5-48d6-bf05-02b8bd22e08b" name="sellers" objectType="TABLE" physicalName="sellers" >
+      <remarks></remarks>
+      <folder id="FOLTAB741" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL75" populated="true" UUID="b52c6471-d97f-4788-8822-b9e9920599d5" autoIncrement="false" defaultValue="" name="seller_id" nullable="0" physicalName="seller_id" precision="2147483647" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL76" populated="true" UUID="a137f94c-88b2-4112-8edf-39b2c84559ed" autoIncrement="false" defaultValue="" name="seller_zip_code_prefix" nullable="1" physicalName="seller_zip_code_prefix" precision="10" referenceCount="1" scale="0" sourceDataTypeName="varchar" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL77" populated="true" UUID="baa68f68-c796-411d-86fe-1bca85a571ef" autoIncrement="false" defaultValue="" name="seller_city" nullable="1" physicalName="seller_city" precision="2147483647" referenceCount="1" scale="0" sourceDataTypeName="text" type="12" >
+        <remarks></remarks>
+       </column>
+       <column id="COL78" populated="true" UUID="4f4a8ee4-649d-4365-923e-4208631f4ba4" autoIncrement="false" defaultValue="" name="seller_state" nullable="1" physicalName="seller_state" precision="2" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB743" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB742" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB744" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX79" populated="true" UUID="ecf7afa4-7fd6-448d-9913-a4d931e69610" clustered="false" name="sellers_pkey" physicalName="sellers_pkey" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC80" populated="true" UUID="a9e4cd67-176d-41d6-8d71-0aa3c5dcc785" ascendingOrDescending="UNSPECIFIED" column-ref="COL75" name="seller_id" physicalName="seller_id" />
+       </index>
+      </folder>
+     </table>
+    </schema>
+   </catalog>
+   <catalog id="CAT81" populated="false" UUID="bb82d167-8e65-4189-9992-a01ee6beea21" name="postgres" nativeTerm="database" physicalName="postgres" >
+   </catalog>
+   <catalog id="CAT82" populated="false" UUID="df101483-57bc-4ad2-848b-5278ae8b2f01" name="template1" nativeTerm="database" physicalName="template1" >
+   </catalog>
+   <relationships>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB84" populated="true" UUID="116a2e1a-dfe3-4078-b0ef-f07348a6ef71" name="customers" objectType="TABLE" physicalName="customers" >
+   <remarks></remarks>
+   <folder id="FOLTAB841" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL85" populated="true" UUID="15e4f6b1-6f96-4c45-af91-48fde4518f56" autoIncrement="false" autoIncrementSequenceName="customers_customer_id_seq" defaultValue="" name="customer_id" nullable="0" physicalName="customer_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL86" populated="true" UUID="91b1e26b-7147-4996-9722-48a39668384a" autoIncrement="false" autoIncrementSequenceName="customers_customer_unique_id_seq" defaultValue="" name="customer_unique_id" nullable="0" physicalName="customer_unique_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL87" populated="true" UUID="fb93736a-cb3f-43a6-ad4b-216fd096f989" autoIncrement="false" autoIncrementSequenceName="customers_customer_city_seq" defaultValue="" name="customer_city" nullable="0" physicalName="customer_city" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL88" populated="true" UUID="103cca73-3c00-46f5-a5d2-f1b1f324d962" autoIncrement="false" autoIncrementSequenceName="customers_customer_state_seq" defaultValue="" name="customer_state" nullable="0" physicalName="customer_state" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL89" populated="true" UUID="9d7f61be-2ce0-4fc6-a504-b87bafd5e04b" autoIncrement="false" autoIncrementSequenceName="customers_customer_zip_code_prefix_seq" defaultValue="" name="customer_zip_code_prefix" nullable="0" physicalName="customer_zip_code_prefix" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL90" populated="true" UUID="2e237e85-126c-4dd7-a21f-4c2055ecc2b0" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB843" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB842" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB844" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX91" populated="true" UUID="6ba1b15d-b0eb-4c91-bfbf-0b95cfa5dbd2" clustered="false" name="customer_id" physicalName="customer_id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC92" populated="true" UUID="30319748-643a-4f09-aae1-3b8db6df18e3" ascendingOrDescending="UNSPECIFIED" column-ref="COL85" name="customer_id" physicalName="customer_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB93" populated="true" UUID="e3f44906-5d72-40e6-b778-f8513df4285e" name="geolocation" objectType="TABLE" physicalName="geolocation" >
+   <remarks></remarks>
+   <folder id="FOLTAB931" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL94" populated="true" UUID="f7e87399-9a16-4f5c-bcb4-5580ac3f6d3b" autoIncrement="false" defaultValue="" name="geolocation_zip_code_prefix" nullable="1" physicalName="geolocation_zip_code_prefix" precision="10" referenceCount="1" scale="0" source-column-ref="COL15" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL95" populated="true" UUID="1229c650-91c9-4cff-9eb6-4bb5e194ab09" autoIncrement="false" defaultValue="" name="geolocation_lat" nullable="1" physicalName="geolocation_lat" precision="0" referenceCount="1" scale="0" source-column-ref="COL16" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL96" populated="true" UUID="171e1500-f280-497b-a376-bb1d04a610a9" autoIncrement="false" defaultValue="" name="geolocation_lng" nullable="1" physicalName="geolocation_lng" precision="0" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL97" populated="true" UUID="bf47a855-5245-4a88-843c-f4107f668015" autoIncrement="false" defaultValue="" name="geolocation_city" nullable="1" physicalName="geolocation_city" precision="0" referenceCount="1" scale="0" source-column-ref="COL18" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL98" populated="true" UUID="d13510b6-0d88-496c-978a-7a35149784e1" autoIncrement="false" defaultValue="" name="geolocation_state" nullable="1" physicalName="geolocation_state" precision="2" referenceCount="1" scale="0" source-column-ref="COL19" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL99" populated="true" UUID="67b73984-5ff3-4cda-95a5-d4179389a079" autoIncrement="false" defaultValue="" name="seller_id" nullable="0" physicalName="seller_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB933" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB932" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB934" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX100" populated="true" UUID="7a1f818b-daed-44c8-b9cc-7053ad4bb633" clustered="false" name="geolocation_pk" physicalName="geolocation_pk" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB101" populated="true" UUID="9b2ff642-9067-42a1-a3af-8b6d24d45480" name="order_items" objectType="TABLE" physicalName="order_items" >
+   <remarks></remarks>
+   <folder id="FOLTAB1011" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL102" populated="true" UUID="a53e2e26-52c2-4225-a7c0-e76ecfec88f6" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL22" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL103" populated="true" UUID="e67812ec-0c36-43d0-aaba-77d311abff6d" autoIncrement="false" defaultValue="" name="order_item_id" nullable="0" physicalName="order_item_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" source-column-ref="COL23" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL104" populated="true" UUID="78bde863-2b59-496d-b16f-d55a5ec633b2" autoIncrement="false" defaultValue="" name="product_id" nullable="1" physicalName="product_id" precision="0" referenceCount="1" scale="0" source-column-ref="COL24" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL105" populated="true" UUID="4a94dd35-1f60-486f-bac0-7a3c94eefa57" autoIncrement="false" defaultValue="" name="seller_id" nullable="1" physicalName="seller_id" precision="0" referenceCount="1" scale="0" source-column-ref="COL25" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL106" populated="true" UUID="26d222d3-bfb5-450f-8f34-16b0341df725" autoIncrement="false" defaultValue="" name="shipping_limit_date" nullable="1" physicalName="shipping_limit_date" precision="0" referenceCount="1" scale="0" source-column-ref="COL26" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL107" populated="true" UUID="c367124f-6d89-4e89-946b-46acd2fcf376" autoIncrement="false" defaultValue="" name="price" nullable="1" physicalName="price" precision="10" referenceCount="1" scale="2" source-column-ref="COL27" sourceDataTypeName="numeric" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL108" populated="true" UUID="e894a7bb-b198-460c-a115-f088789925e0" autoIncrement="false" defaultValue="" name="freight_value" nullable="1" physicalName="freight_value" precision="10" referenceCount="1" scale="2" source-column-ref="COL28" sourceDataTypeName="numeric" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1013" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1012" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1014" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX109" populated="true" UUID="80b4fef0-3641-406b-8486-e8c32f27ad6f" clustered="false" name="order_items_pkey" physicalName="order_items_pkey" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC110" populated="true" UUID="523bbe0c-e1a6-484e-93a3-4aa173b9c5bc" ascendingOrDescending="UNSPECIFIED" column-ref="COL102" name="order_id" physicalName="order_id" />
+     <index-column id="IDC111" populated="true" UUID="8b47a05e-22f9-4da8-8833-24c5b4c7ee04" ascendingOrDescending="UNSPECIFIED" column-ref="COL103" name="order_item_id" physicalName="order_item_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB112" populated="true" UUID="19b172c5-b89c-454a-943f-09de836103c4" name="order_payments" objectType="TABLE" physicalName="order_payments" >
+   <remarks></remarks>
+   <folder id="FOLTAB1121" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL113" populated="true" UUID="81c5b61e-aee2-4582-bd14-f556369c3777" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL33" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL114" populated="true" UUID="a2874c00-6789-485b-8888-4f89eda9fdca" autoIncrement="false" defaultValue="" name="payment_sequential" nullable="0" physicalName="payment_sequential" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" source-column-ref="COL34" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL115" populated="true" UUID="afdd1c31-f20e-4a11-b287-3c6916d05333" autoIncrement="false" defaultValue="" name="payment_type" nullable="1" physicalName="payment_type" precision="0" referenceCount="1" scale="0" source-column-ref="COL35" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL116" populated="true" UUID="08d0b809-d7a0-46c6-b741-6219d81895a2" autoIncrement="false" defaultValue="" name="payment_installments" nullable="1" physicalName="payment_installments" precision="0" referenceCount="1" scale="0" source-column-ref="COL36" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL117" populated="true" UUID="a3279495-2b90-4505-adad-2a0f903594ce" autoIncrement="false" defaultValue="" name="payment_value" nullable="1" physicalName="payment_value" precision="10" referenceCount="1" scale="2" source-column-ref="COL37" sourceDataTypeName="numeric" type="2" userDefinedTypeUUID="115245ce-612c-4d6a-b559-6dd903dd959a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1123" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1122" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1124" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX118" populated="true" UUID="7b2f0756-c3c7-43d4-b933-765b0aa984d0" clustered="false" name="order_payments_pkey" physicalName="order_payments_pkey" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC119" populated="true" UUID="36d0d310-90ff-4c67-8369-6696484b1f72" ascendingOrDescending="UNSPECIFIED" column-ref="COL113" name="order_id" physicalName="order_id" />
+     <index-column id="IDC120" populated="true" UUID="4b191ecf-96e9-4c31-a3ab-7917c534ae6a" ascendingOrDescending="UNSPECIFIED" column-ref="COL114" name="payment_sequential" physicalName="payment_sequential" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB121" populated="true" UUID="e9ac5aa3-4b25-4932-95bb-7370c0332d0a" name="order_reviews" objectType="TABLE" physicalName="order_reviews" >
+   <remarks></remarks>
+   <folder id="FOLTAB1211" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL122" populated="true" UUID="52cbdb91-f0a4-4695-8124-ab2af3c28fab" autoIncrement="false" defaultValue="" name="review_id" nullable="0" physicalName="review_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL42" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL123" populated="true" UUID="29b392dd-a314-4784-baa1-4c4ca419123d" autoIncrement="false" defaultValue="" name="order_id" nullable="1" physicalName="order_id" precision="0" referenceCount="2" scale="0" source-column-ref="COL43" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL124" populated="true" UUID="8d4fcd79-856d-4cc2-a1af-07b1c2adb7d1" autoIncrement="false" defaultValue="" name="review_score" nullable="1" physicalName="review_score" precision="0" referenceCount="1" scale="0" source-column-ref="COL44" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL125" populated="true" UUID="7aaa0fe3-4302-48ee-a6a4-a911751b7417" autoIncrement="false" defaultValue="" name="review_comment_title" nullable="1" physicalName="review_comment_title" precision="0" referenceCount="1" scale="0" source-column-ref="COL45" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL126" populated="true" UUID="9addb1e0-9ce5-42aa-986b-9464101dfb52" autoIncrement="false" defaultValue="" name="review_comment_message" nullable="1" physicalName="review_comment_message" precision="0" referenceCount="1" scale="0" source-column-ref="COL46" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL127" populated="true" UUID="cb7de673-2cc9-4ea0-9bfa-9bed938da8e6" autoIncrement="false" defaultValue="" name="review_creation_date" nullable="1" physicalName="review_creation_date" precision="0" referenceCount="1" scale="0" source-column-ref="COL47" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL128" populated="true" UUID="d58439e6-4e3b-4fa5-aa8a-88cd994305be" autoIncrement="false" defaultValue="" name="review_answer_timestamp" nullable="1" physicalName="review_answer_timestamp" precision="0" referenceCount="1" scale="0" source-column-ref="COL48" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1214" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX129" populated="true" UUID="c14e9af6-8ded-48fd-bcd9-eefd06e03d01" clustered="false" name="order_reviews_pkey" physicalName="order_reviews_pkey" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC130" populated="true" UUID="b0d573e7-0b76-44c9-8ca1-07255ccb8fff" ascendingOrDescending="UNSPECIFIED" column-ref="COL122" name="review_id" physicalName="review_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB131" populated="true" UUID="973c5b61-2d90-41f6-ac1b-7d01e574be6e" name="orders" objectType="TABLE" physicalName="orders" >
+   <remarks></remarks>
+   <folder id="FOLTAB1311" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL132" populated="true" UUID="46a905cd-4c19-4740-bc74-621c699d4103" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL52" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL133" populated="true" UUID="70720879-0e57-4936-94b4-f57e1f0a0dd4" autoIncrement="false" defaultValue="" name="customer_id" nullable="1" physicalName="customer_id" precision="0" referenceCount="1" scale="0" source-column-ref="COL53" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL134" populated="true" UUID="779e9a8e-ab4e-4032-80d6-2e97f33ff67c" autoIncrement="false" defaultValue="" name="order_status" nullable="1" physicalName="order_status" precision="0" referenceCount="1" scale="0" source-column-ref="COL54" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL135" populated="true" UUID="8dcb6a7c-3000-4596-874c-81fc7a399eec" autoIncrement="false" defaultValue="" name="order_purchase_timestamp" nullable="1" physicalName="order_purchase_timestamp" precision="0" referenceCount="1" scale="0" source-column-ref="COL55" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL136" populated="true" UUID="a9c6ab9f-a91b-4366-8f29-5798f99ac076" autoIncrement="false" defaultValue="" name="order_approved_at" nullable="1" physicalName="order_approved_at" precision="0" referenceCount="1" scale="0" source-column-ref="COL56" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL137" populated="true" UUID="8a4ead71-144f-4656-b669-a7ab1880f1d3" autoIncrement="false" defaultValue="" name="order_delivered_carrier_date" nullable="1" physicalName="order_delivered_carrier_date" precision="0" referenceCount="1" scale="0" source-column-ref="COL57" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL138" populated="true" UUID="7424c31c-c678-4225-804b-74791cfdc253" autoIncrement="false" defaultValue="" name="order_delivered_customer_date" nullable="1" physicalName="order_delivered_customer_date" precision="0" referenceCount="1" scale="0" source-column-ref="COL58" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL139" populated="true" UUID="57b6af98-49cf-497a-aec3-5f182f7b9bf9" autoIncrement="false" defaultValue="" name="order_estimated_delivery_date" nullable="1" physicalName="order_estimated_delivery_date" precision="0" referenceCount="1" scale="0" source-column-ref="COL59" sourceDataTypeName="timestamp" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks></remarks>
+    </column>
+    <column id="COL140" populated="true" UUID="43823244-ed20-473a-8ad2-e9dfb76e4633" autoIncrement="false" defaultValue="" name="payment_sequential" nullable="0" physicalName="payment_sequential" precision="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1313" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1312" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1314" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX141" populated="true" UUID="3a0290af-4335-4e0d-9aa4-321667279566" clustered="false" name="orders_pkey" physicalName="orders_pkey" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC142" populated="true" UUID="3c693814-72fb-40ae-8a6a-b6abb4a5be58" ascendingOrDescending="UNSPECIFIED" column-ref="COL132" name="order_id" physicalName="order_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB143" populated="true" UUID="23f3cf94-baf0-49be-8939-ba03004be21f" name="products" objectType="TABLE" physicalName="products" >
+   <remarks></remarks>
+   <folder id="FOLTAB1431" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL144" populated="true" UUID="48a9c8b5-86a0-44c9-8333-8c423df0744c" autoIncrement="false" defaultValue="" name="product_id" nullable="0" physicalName="product_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL63" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL145" populated="true" UUID="8c3a397c-2e95-4d01-8fc2-380b0904bb8d" autoIncrement="false" defaultValue="" name="product_category_name" nullable="1" physicalName="product_category_name" precision="0" referenceCount="1" scale="0" source-column-ref="COL64" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL146" populated="true" UUID="046ce402-db98-4edf-b066-758a45eb0fde" autoIncrement="false" defaultValue="" name="product_name_length" nullable="1" physicalName="product_name_length" precision="0" referenceCount="1" scale="0" source-column-ref="COL65" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL147" populated="true" UUID="0b6f03a3-bb60-436b-b378-fbdb832b677b" autoIncrement="false" defaultValue="" name="product_description_length" nullable="1" physicalName="product_description_length" precision="0" referenceCount="1" scale="0" source-column-ref="COL66" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL148" populated="true" UUID="789042eb-2a6f-4141-af14-16c44ca3d352" autoIncrement="false" defaultValue="" name="product_photos_qty" nullable="1" physicalName="product_photos_qty" precision="0" referenceCount="1" scale="0" source-column-ref="COL67" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL149" populated="true" UUID="964c5478-5efa-4b4a-92a4-8e862d49a655" autoIncrement="false" defaultValue="" name="product_weight_g" nullable="1" physicalName="product_weight_g" precision="0" referenceCount="1" scale="0" source-column-ref="COL68" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL150" populated="true" UUID="1baaeea7-7efc-4a8c-bee1-97d52ea09e43" autoIncrement="false" defaultValue="" name="product_length_cm" nullable="1" physicalName="product_length_cm" precision="0" referenceCount="1" scale="0" source-column-ref="COL69" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL151" populated="true" UUID="6973991f-9d86-4cd5-ae60-2af03848de62" autoIncrement="false" defaultValue="" name="product_height_cm" nullable="1" physicalName="product_height_cm" precision="0" referenceCount="1" scale="0" source-column-ref="COL70" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL152" populated="true" UUID="eab780e1-90bc-4ee6-9e00-26f8fc664cc4" autoIncrement="false" defaultValue="" name="product_width_cm" nullable="1" physicalName="product_width_cm" precision="0" referenceCount="1" scale="0" source-column-ref="COL71" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL153" populated="true" UUID="c05f74f7-1f4f-49cb-b01b-551ae0be32cc" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL154" populated="true" UUID="55947976-4a7c-4b92-9800-6a24df7f5470" autoIncrement="false" defaultValue="" name="order_item_id" nullable="0" physicalName="order_item_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1433" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1432" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1434" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX155" populated="true" UUID="8ab4550a-963a-4836-8b32-708542e8e763" clustered="false" name="products_pkey" physicalName="products_pkey" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC156" populated="true" UUID="ba3c4f27-635a-46d1-b2ac-ab3804d10ad2" ascendingOrDescending="UNSPECIFIED" column-ref="COL144" name="product_id" physicalName="product_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB157" populated="true" UUID="838ba77c-de2b-42bf-9742-56fc02a871e7" name="sellers" objectType="TABLE" physicalName="sellers" >
+   <remarks></remarks>
+   <folder id="FOLTAB1571" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL158" populated="true" UUID="ca5509ea-8eab-4350-a3b2-fe80157c3475" autoIncrement="false" defaultValue="" name="seller_id" nullable="0" physicalName="seller_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL75" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL159" populated="true" UUID="2f17b6a3-9421-4f1e-a294-610094e2cfe6" autoIncrement="false" defaultValue="" name="seller_zip_code_prefix" nullable="1" physicalName="seller_zip_code_prefix" precision="10" referenceCount="1" scale="0" source-column-ref="COL76" sourceDataTypeName="varchar" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL160" populated="true" UUID="a20fcbec-11be-4867-bcf0-302e44ac3e8c" autoIncrement="false" defaultValue="" name="seller_city" nullable="1" physicalName="seller_city" precision="0" referenceCount="1" scale="0" source-column-ref="COL77" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL161" populated="true" UUID="92d29c02-3bd4-47ca-a188-4c9768425a7a" autoIncrement="false" defaultValue="" name="seller_state" nullable="1" physicalName="seller_state" precision="2" referenceCount="1" scale="0" source-column-ref="COL78" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL162" populated="true" UUID="8395756f-be5b-4e7b-8405-529e628e21a3" autoIncrement="false" defaultValue="" name="order_id" nullable="0" physicalName="order_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="text" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
+     <remarks></remarks>
+    </column>
+    <column id="COL163" populated="true" UUID="0fb8ce31-68a9-4056-ae83-86b5c18eceb7" autoIncrement="false" defaultValue="" name="order_item_id" nullable="0" physicalName="order_item_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1573" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1572" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1574" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX164" populated="true" UUID="da64015c-2da0-42c4-b0ba-4b87f7f3433b" clustered="false" name="sellers_pkey" physicalName="sellers_pkey" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC165" populated="true" UUID="cab2abfe-8035-4d68-b932-4edd6bc788d6" ascendingOrDescending="UNSPECIFIED" column-ref="COL158" name="seller_id" physicalName="seller_id" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL166" populated="true" UUID="14370bb3-37d1-4013-91cb-5cf229c91a6a" deferrability="7" deleteRule="3" fk-table-ref="TAB84" fkCardinality="7" identifying="false" name="geolocation_customers_fk" physicalName="geolocation_customers_fk" pk-table-ref="TAB93" pkCardinality="2" updateRule="3" >
+   </relationship>
+   <relationship id="REL167" populated="true" UUID="0472dc5b-e050-4b58-80c4-81cc4d06e8ca" deferrability="7" deleteRule="3" fk-table-ref="TAB143" fkCardinality="7" identifying="false" name="order_items_products_fk" physicalName="order_items_products_fk" pk-table-ref="TAB101" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP168" populated="true" UUID="392f2cda-7a6c-4f34-8906-f8aebb45db2a" fk-column-ref="COL153" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL102" />
+    <column-mapping id="CMP169" populated="true" UUID="471e9e3a-42b8-42c0-8ee3-7b1aaabd8f2d" fk-column-ref="COL154" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL103" />
+   </relationship>
+   <relationship id="REL170" populated="true" UUID="a5a0c0db-ea31-4fd5-bb8b-44d4b3979e6f" deferrability="7" deleteRule="3" fk-table-ref="TAB157" fkCardinality="7" identifying="false" name="order_items_sellers_fk" physicalName="order_items_sellers_fk" pk-table-ref="TAB101" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP171" populated="true" UUID="df7866f0-8709-467a-b492-40a862735c84" fk-column-ref="COL162" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL102" />
+    <column-mapping id="CMP172" populated="true" UUID="fe2c3ded-f0d8-4c29-8dd8-43dbf4b77551" fk-column-ref="COL163" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL103" />
+   </relationship>
+   <relationship id="REL173" populated="true" UUID="87727673-8dba-44aa-943d-adcd0c50a1bb" deferrability="7" deleteRule="3" fk-table-ref="TAB131" fkCardinality="7" identifying="false" name="order_payments_orders_fk" physicalName="order_payments_orders_fk" pk-table-ref="TAB112" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP174" populated="true" UUID="bbebac1e-af24-4ab7-8a2d-55585f73bb60" fk-column-ref="COL132" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL113" />
+    <column-mapping id="CMP175" populated="true" UUID="a0be9c8f-ecce-4a70-ad9d-c18d4090ca1c" fk-column-ref="COL140" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL114" />
+   </relationship>
+   <relationship id="REL176" populated="true" UUID="ced4e0d2-4c60-4ae7-ac11-97a1c9de1e6d" deferrability="7" deleteRule="3" fk-table-ref="TAB121" fkCardinality="7" identifying="false" name="orders_order_reviews_fk" physicalName="orders_order_reviews_fk" pk-table-ref="TAB131" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP177" populated="true" UUID="d992cd28-4b7d-45a3-a602-51d6b5fced3c" fk-column-ref="COL123" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL132" />
+   </relationship>
+   <relationship id="REL178" populated="true" UUID="f131936e-aa6a-4755-ab43-e38b8503148a" deferrability="7" deleteRule="3" fk-table-ref="TAB84" fkCardinality="7" identifying="false" name="orders_customers_fk" physicalName="orders_customers_fk" pk-table-ref="TAB131" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP179" populated="true" UUID="3c5f0806-54ed-496d-b35a-4846f6e7ee1a" fk-column-ref="COL90" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL132" />
+   </relationship>
+   <relationship id="REL180" populated="true" UUID="dd822aa4-954e-48ac-b24f-17c6eb200e03" deferrability="7" deleteRule="3" fk-table-ref="TAB101" fkCardinality="7" identifying="false" name="orders_order_items_fk" physicalName="orders_order_items_fk" pk-table-ref="TAB131" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP181" populated="true" UUID="02ee3188-a46b-4c51-a429-097f4d33453c" fk-column-ref="COL102" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL132" />
+   </relationship>
+   <relationship id="REL182" populated="true" UUID="9bf03854-37f9-41c8-9be4-f7e58014fc29" deferrability="7" deleteRule="3" fk-table-ref="TAB93" fkCardinality="7" identifying="false" name="sellers_geolocation_fk" physicalName="sellers_geolocation_fk" pk-table-ref="TAB157" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP183" populated="true" UUID="e1db45ca-1778-4bf3-9677-a60da5fe8766" fk-column-ref="COL99" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL158" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB84" x="814" y="305" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB93" x="1180" y="527" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB101" x="456" y="528" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB112" x="85" y="284" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB121" x="455" y="74" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB131" x="452" y="299" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB143" x="458" y="721" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB157" x="828" y="527" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL173" pkConnection="0.5757575757575758" fkConnection="0.2709677419354839" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL176" pkConnection="0.4708333333333333" fkConnection="0.497737556561086" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL178" pkConnection="0.4" fkConnection="0.49557522123893805" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL180" pkConnection="0.475" fkConnection="0.497737556561086" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL167" pkConnection="0.502262443438914" fkConnection="0.4823008849557522" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL170" pkConnection="0.4409448818897638" fkConnection="0.504424778761062" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL182" pkConnection="0.49557522123893805" fkConnection="0.49557522123893805" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL166" pkConnection="0.09259259259259259" fkConnection="0.8320610687022901" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
