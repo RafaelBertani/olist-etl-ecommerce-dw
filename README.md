@@ -67,6 +67,8 @@ Este script remove caracteres inválidos (como emojis) que podem gerar erros de 
 
 ---
 
+![Imagem 1](./assets/Image1.png)
+
 ### 🗄️ Etapa 2 – Criação das Tabelas e Importação
 
 Após executar o script de limpeza, rode o seguinte comando no terminal ou no PSQL Tool:
@@ -83,15 +85,17 @@ psql -U postgres -f "C:\Users\User\Desktop\criacao_importacao.sql"
   - Caminhos dos comandos `\copy`
   - Usuário do banco (se necessário)
 
+![Imagem 2](./assets/Image2.png)
+
+![Imagem 3](./assets/Image3.png)
+
 ---
 
 ## 3. Modelo da Base Operacional (Fonte)
 
 Imagem do modelo relacional da base operacional:
 
-```
-./assets/ModeloDaBaseOperacional-FONTE.png
-```
+![Modelo da Base Operacional](./assets/ModeloDaBaseOperacional-FONTE.png)
 
 ---
 
@@ -99,9 +103,7 @@ Imagem do modelo relacional da base operacional:
 
 Imagem do modelo dimensional (Data Warehouse):
 
-```
-./assets/ModeloDimensional-DESTINO.png
-```
+![Modelo Dimensional](./assets/ModeloDimensional-DESTINO.png)
 
 ---
 
