@@ -31,7 +31,7 @@ A análise tem como principais objetivos:
 - Analisar a participação das categorias por Estado  
 - Identificar os clientes que geram maior receita  
 - Entender o perfil de pagamento  
-- Calcular gasto médio  
+- Calcular o gasto médio  
 - Visualizar geograficamente onde ocorrem as vendas  
 
 Com esses insights, busca-se:
