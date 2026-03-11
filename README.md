@@ -28,7 +28,7 @@ O dataset é composto por múltiplas tabelas relacionais:
 A análise tem como principais objetivos:
 
 - Avaliar a evolução temporal das vendas  
-- Analisar a participação das categorias por Estado  
+- Analisar a participação das categorias por localização  
 - Identificar os clientes que geram maior receita  
 - Entender o perfil de pagamento  
 - Calcular o gasto médio  
