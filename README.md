@@ -19,7 +19,6 @@ O dataset é composto por múltiplas tabelas relacionais:
 - Produtos  
 - Vendedores  
 - Avaliações  
-- Pagamentos  
 
 ---
 
