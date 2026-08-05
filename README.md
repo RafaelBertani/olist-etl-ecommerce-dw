@@ -45,9 +45,9 @@ Com esses insights, busca-se:
 
 ---
 
-## 2. ⚙️ Criação e Importação dos Dados Operacionais
+## 2. Criação e Importação dos Dados Operacionais
 
-### 🧹 Etapa 1 – Tratamento do CSV de Reviews
+### Etapa 1 – Tratamento do CSV de Reviews
 
 Com os arquivos `.csv` salvos localmente, execute o script:
 
@@ -68,7 +68,7 @@ Este script remove caracteres inválidos (como emojis) que podem gerar erros de 
 
 ![Imagem 1](./assets/Image1.png)
 
-### 🗄️ Etapa 2 – Criação das Tabelas e Importação
+### Etapa 2 – Criação das Tabelas e Importação
 
 Após executar o script de limpeza, rode o seguinte comando no terminal ou no PSQL Tool:
 
@@ -114,7 +114,7 @@ Executar o script:
 psql -U postgres -f "C:\Users\User\Desktop\criacao_dimensional.sql"
 ```
 
-🔧 Ajustar:
+Ajustar:
 - Caminho do arquivo
 - Usuário do banco (caso diferente de `postgres`)
 
@@ -126,7 +126,7 @@ SELECT * FROM datamart.vw_fatovendas_expandido;
 
 ---
 
-## 6. 📊 Consultas com Funções Analíticas
+## 6. Consultas com Funções Analíticas
 
 Arquivo:
 
